@@ -7,7 +7,14 @@
 
         <title>App Name - @yield('title')</title>
 
-        @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/layout.css', 'resources/css/home.css'])
+        @vite([
+            'resources/sass/app.scss',
+            'resources/js/app.js',
+            'resources/css/layout.css',
+            'resources/css/home.css',
+            'resources/css/people.css'])
+        <style>
+          </style>
     </head>
     <body>
         <header>
@@ -23,7 +30,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link"
-                           href="">Home</a>
+                           href="/home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
@@ -35,7 +42,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
-                           href="">People</a>
+                           href="/people">Peoples</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"

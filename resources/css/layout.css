@@ -72,3 +72,48 @@ h6 {
 .copy {
     background-color: rgba(0, 0, 0, 0.2);
 }
+
+.project-card {
+    margin: 3rem 0;
+  }
+
+  .card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card img {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  .left-card img {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .right-card img {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .btn-custom {
+    background-color: #007bff;
+    color: white;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+  }
+
+  .btn-custom:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+
+  .project-title {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .project-description {
+    color: #555;
+  }
