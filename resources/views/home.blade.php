@@ -6,12 +6,6 @@
 
     <div class="container">
         <div class="row">
-            <div class="description">
-                <h1 class="home_welcome">Who are we ?</h1>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, dolore ea. Pariatur autem amet tempora
-                delectus tenetur maiores perferendis deserunt quod sunt neque, quibusdam molestias illum veniam nobis
-                quisquam alias?
-            </div>
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -32,7 +26,6 @@
                             <p class="caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est dolores
                                 laborum! Exercitationem, culpa quibusdam iusto fugit eaque magni. Labore alias sunt,
                                 provident adipisci expedita dolores. Nisi deleniti repudiandae debitis.
-
                             </p>
                         </div>
                     </div>
@@ -80,6 +73,116 @@
                 </button>
             </div>
         </div>
+
+        <h1 class="team home_welcome">Our team</h1>
+
+        <section class="team-section py-10">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="team-col col-lg-6">
+                        <div class="card-sl card border-0 pt-5 my-5 position-relative">
+                            <a href="#" class="Person-link stretched-link" style="position: relative">
+                            <div class="card-body p-4">
+                                <div class="member-profile position-absolute w-100 text-center">
+                                    <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
+                                </div>
+                                <div class="card-text pt-1">
+                                    <h3 class="member-name mb-0 text-center font-weight-bold">
+                                        Name
+                                    </h3>
+                                    <div class="mb-3 text-center">Positon</div>
+                                    <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
+                                </div>
+                            </div><!--//card-body-->
+                            </a>
+                            <div class="card-footer theme-bg-primary border-0 text-center">
+                                <ul class="social-list list-inline mb-0 mx-auto">
+                                    <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                                    <li>Phone: phone number </a></li>
+                                </ul><!--//social-list-->
+                            </div><!--//card-footer-->
+                        </div><!--//card-->
+                    </div><!--//col-->
+
+                    <div class="team-col col-lg-6">
+                        <div class="card-sl card border-0 pt-5 my-5 position-relative">
+                            <a href="#" class="Person-link stretched-link" style="position: relative">
+                            <div class="card-body p-4">
+                                <div class="member-profile position-absolute w-100 text-center">
+                                    <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
+                                </div>
+                                <div class="card-text pt-1">
+                                    <h3 class="member-name mb-0 text-center font-weight-bold">
+                                        Name
+                                    </h3>
+                                    <div class="mb-3 text-center">Positon</div>
+                                    <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
+                                </div>
+                            </div><!--//card-body-->
+                            </a>
+                            <div class="card-footer theme-bg-primary border-0 text-center">
+                                <ul class="social-list list-inline mb-0 mx-auto">
+                                    <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                                    <li>Phone: phone number </a></li>
+                                </ul><!--//social-list-->
+                            </div><!--//card-footer-->
+                        </div><!--//card-->
+                    </div><!--//col-->
+
+                    <div class="col-lg-6">
+                        <div class="card-sl card border-0 pt-5 my-5 position-relative">
+                            <a href="#" class="Person-link stretched-link" style="position: relative">
+                            <div class="card-body p-4">
+                                <div class="member-profile position-absolute w-100 text-center">
+                                    <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
+                                </div>
+                                <div class="card-text pt-1">
+                                    <h3 class="member-name mb-0 text-center font-weight-bold">
+                                        Name
+                                    </h3>
+                                    <div class="mb-3 text-center">Positon</div>
+                                    <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
+                                </div>
+                            </div><!--//card-body-->
+                            </a>
+                            <div class="card-footer theme-bg-primary border-0 text-center">
+                                <ul class="social-list list-inline mb-0 mx-auto">
+                                    <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                                    <li>Phone: phone number </a></li>
+                                </ul><!--//social-list-->
+                            </div><!--//card-footer-->
+                        </div><!--//card-->
+                    </div><!--//col-->
+
+                    <div class="col-lg-6">
+                        <div class="card-sl card border-0 pt-5 my-5 position-relative">
+                            <a href="#" class="Person-link stretched-link" style="position: relative">
+                            <div class="card-body p-4">
+                                <div class="member-profile position-absolute w-100 text-center">
+                                    <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
+                                </div>
+                                <div class="card-text pt-1">
+                                    <h3 class="member-name mb-0 text-center font-weight-bold">
+                                        Name
+                                    </h3>
+                                    <div class="mb-3 text-center">Positon</div>
+                                    <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
+                                </div>
+                            </div><!--//card-body-->
+                            </a>
+                            <div class="card-footer theme-bg-primary border-0 text-center">
+                                <ul class="social-list list-inline mb-0 mx-auto">
+                                    <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                                    <li>Phone: phone number </a></li>
+                                </ul><!--//social-list-->
+                            </div><!--//card-footer-->
+                        </div><!--//card-->
+                    </div><!--//col-->
+            </div>
+
+        </section>
+
+
         <h1 class="home_welcome description">Some of our projects ?</h1>
         <div class="row">
             <div class="container">
@@ -87,16 +190,16 @@
                     <div class="col">
                         <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                             lc-helper="background"
-                            style="background: url(https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image)  center / cover no-repeat;">
+                            style="background: url(https://picsum.photos/1920/1080)  center / cover no-repeat;">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                                 <div class="lc-block pt-5 mt-5 mb-4">
                                     <div editable="rich">
                                         <h2 class="display-6 lh-1 fw-bold">Short title, long jacket</h2>
-                                        <p>description</p>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut voluptatem cum vero obcaecati quod ipsam! Nostrum, molestias. Doloribus ut sapiente necessitatibus amet quaerat quidem eaque harum optio repellendus! Incidunt, cumque?</p>
                                     </div>
                                 </div>
                                 <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
-                                        class="btn btn-link btn-sm text-white " href="#" role="button">Read more</a>
+                                        class="btn btn-link btn-sm text-white stretched-link" href="#" role="button">Read more</a>
                                 </ul>
                             </div>
                         </div>
@@ -105,7 +208,7 @@
                     <div class="col">
                         <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                             lc-helper="background"
-                            style="background:url(https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image)  center / cover no-repeat;">
+                            style="background:url(https://picsum.photos/1920/1080)  center / cover no-repeat;">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                                 <div class="lc-block pt-5 mt-5 mb-4">
                                     <div editable="rich">
@@ -115,7 +218,7 @@
                                     </div>
                                 </div>
                                 <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
-                                        class="btn btn-link btn-sm text-white " href="#" role="button">Read more</a>
+                                        class="btn btn-link btn-sm text-white stretched-link" href="#" role="button">Read more</a>
                                 </ul>
                             </div>
                         </div>
@@ -124,7 +227,7 @@
                     <div class="col">
                         <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                             lc-helper="background"
-                            style="background:url(https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image)  center / cover no-repeat;">
+                            style="background:url(https://picsum.photos/1920/1080)  center / cover no-repeat;">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                                 <div class="lc-block pt-5 mt-5 mb-4">
                                     <div editable="rich">
@@ -133,14 +236,35 @@
                                     </div>
                                 </div>
                                 <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
-                                        class="btn btn-link btn-sm text-white " href="#" role="button">Read
+                                        class="btn btn-link btn-sm text-white stretched-link" href="#" role="button">Read
                                         more</a></ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                            lc-helper="background"
+                            style="background: url(https://picsum.photos/1920/1080)  center / cover no-repeat;">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <div class="lc-block pt-5 mt-5 mb-4">
+                                    <div editable="rich">
+                                        <h2 class="display-6 lh-1 fw-bold">Short title, long jacket</h2>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut voluptatem cum vero obcaecati quod ipsam! Nostrum, molestias. Doloribus ut sapiente necessitatibus amet quaerat quidem eaque harum optio repellendus! Incidunt, cumque?</p>
+                                    </div>
+                                </div>
+                                <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
+                                        class="btn btn-link btn-sm text-white stretched-link" href="#" role="button">Read more</a>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container overflow-hidden">
+
+            <h1 class="home_welcome public">Publications</h1>
+
+            <div class="publications-section container overflow-hidden">
                 <div class="row gy-5">
                     <div class="col-12">
                         <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
@@ -246,6 +370,33 @@
                                         laudantium fugiat eius obcaecati ullam, accusantium voluptas dolore pariatur
                                         praesentium quod officiis, neque laboriosam molestiae. Accusamus totam quasi sit
                                         ullam dolore.</p>
+                                    <a class="btn btn-primary" href="#!" target="_self">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="img-wrapper position-relative bsb-hover-push">
+                                    <a href="#!">
+                                        <span
+                                            class="badge rounded-pill text-bg-warning position-absolute top-0 end-0 m-3">Title</span>
+                                        <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
+                                            src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image"
+                                            alt="Travel">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div>
+                                    <p class="text-secondary mb-1">Oct 9, 2022</p>
+                                    <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
+                                            href="#!">Title</a></h2>
+                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+                                        officiis laborum corrupti molestiae culpa esse voluptate facere ipsam eius. Est aut
+                                        iste rem fuga recusandae nisi nobis, explicabo quis excepturi?</p>
                                     <a class="btn btn-primary" href="#!" target="_self">Read More</a>
                                 </div>
                             </div>

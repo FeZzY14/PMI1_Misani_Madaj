@@ -34,11 +34,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
-                           href="">Publications</a>
+                           href="/publications">Publications</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
-                           href="">Projects</a>
+                           href="/projects">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"

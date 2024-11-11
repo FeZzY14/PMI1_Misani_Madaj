@@ -4,168 +4,113 @@
 
 @section('content')
 
-<div class="container people">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="well mini-profile-widget bootdey.com">
-                    <div class="row g-0">
-                <div class="col-md-6">
-                    <div class="image-container">
-                        <img src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image" class="avatar img-responsive" alt="avatar">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="details">
-                        <h4>Name</h4>
-                        <hr>
-                        <div>Desc</div>
-                        <div>Desc</div>
-                        <div>Desc</div>
-                        <p class="mg-top-20">
-                            <a href="" class="btn btn-blue">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href="" class="btn btn-red">
-                                <i class="bi bi-envelope-at"></i>
-                            </a>
-                        </p>
-                </div>
-            </div>
-                </div>
-            </div>
-        </div>
 
 
-        <div class="col-md-6">
-            <div class="well mini-profile-widget bootdey.com">
-                <div class="row g-0">
-                <div class="col-md-6">
-                    <div class="image-container">
-                        <img src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image" class="avatar img-responsive" alt="avatar">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="details">
-                        <h4>Name</h4>
-                        <hr>
-                        <div>Desc</div>
-                        <div>Desc</div>
-                        <div>Desc</div>
-                        <p class="mg-top-20">
-                            <a href=" " class="btn btn-blue">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href=" " class="btn btn-red">
-                                <i class="bi bi-envelope-at"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
+<section class="team-section py-10">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="team-col col-lg-6">
+                <div class="card-sl card border-0 pt-5 my-5 position-relative">
+                    <a href="#" class="Person-link stretched-link" style="position: relative">
+                    <div class="card-body p-4">
+                        <div class="member-profile position-absolute w-100 text-center">
+                            <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
+                        </div>
+                        <div class="card-text pt-1">
+                            <h3 class="member-name mb-0 text-center font-weight-bold">
+                                Name
+                            </h3>
+                            <div class="mb-3 text-center">Positon</div>
+                            <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
+                        </div>
+                    </div><!--//card-body-->
+                    </a>
+                    <div class="card-footer theme-bg-primary border-0 text-center">
+                        <ul class="social-list list-inline mb-0 mx-auto">
+                            <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                            <li>Phone: phone number </a></li>
+                        </ul><!--//social-list-->
+                    </div><!--//card-footer-->
+                </div><!--//card-->
+            </div><!--//col-->
 
-        <div class="col-md-6">
-            <div class="well mini-profile-widget">
-                <div class="row g-0">
-                <div class="col-md-6">
-                    <div class="image-container">
-                        <img src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image" class="avatar img-responsive" alt="avatar">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="details">
-                        <h4>Name</h4>
-                        <hr>
-                        <div>Desc</div>
-                        <div>Desc</div>
-                        <div>Desc</div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
+            <div class="team-col col-lg-6">
+                <div class="card-sl card border-0 pt-5 my-5 position-relative">
+                    <a href="#" class="Person-link stretched-link" style="position: relative">
+                    <div class="card-body p-4">
+                        <div class="member-profile position-absolute w-100 text-center">
+                            <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
+                        </div>
+                        <div class="card-text pt-1">
+                            <h3 class="member-name mb-0 text-center font-weight-bold">
+                                Name
+                            </h3>
+                            <div class="mb-3 text-center">Positon</div>
+                            <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
+                        </div>
+                    </div><!--//card-body-->
+                    </a>
+                    <div class="card-footer theme-bg-primary border-0 text-center">
+                        <ul class="social-list list-inline mb-0 mx-auto">
+                            <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                            <li>Phone: phone number </a></li>
+                        </ul><!--//social-list-->
+                    </div><!--//card-footer-->
+                </div><!--//card-->
+            </div><!--//col-->
 
-        <div class="col-md-6">
-            <div class="well mini-profile-widget">
-                <div class="row g-0">
-                <div class="col-md-6">
-                    <div class="image-container">
-                        <img src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image" class="avatar img-responsive" alt="avatar">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="details">
-                        <h4>Name</h4>
-                        <hr>
-                        <div>Desc</div>
-                        <div>Desc</div>
-                        <div>Desc</div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
+            <div class="team-col col-lg-6">
+                <div class="card-sl card border-0 pt-5 my-5 position-relative">
+                    <a href="#" class="Person-link stretched-link" style="position: relative">
+                    <div class="card-body p-4">
+                        <div class="member-profile position-absolute w-100 text-center">
+                            <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
+                        </div>
+                        <div class="card-text pt-1">
+                            <h3 class="member-name mb-0 text-center font-weight-bold">
+                                Name
+                            </h3>
+                            <div class="mb-3 text-center">Positon</div>
+                            <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
+                        </div>
+                    </div><!--//card-body-->
+                    </a>
+                    <div class="card-footer theme-bg-primary border-0 text-center">
+                        <ul class="social-list list-inline mb-0 mx-auto">
+                            <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                            <li>Phone: phone number </a></li>
+                        </ul><!--//social-list-->
+                    </div><!--//card-footer-->
+                </div><!--//card-->
+            </div><!--//col-->
 
-        <div class="col-md-6">
-            <div class="well mini-profile-widget bootdey.com">
-                <div class="row g-0">
-                <div class="col-md-6">
-                    <div class="image-container">
-                        <img src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image" class="avatar img-responsive" alt="avatar">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="details">
-                        <h4>Name</h4>
-                        <hr>
-                        <div>Desc</div>
-                        <div>Desc</div>
-                        <div>Desc</div>
-                        <p class="mg-top-20">
-                            <a href=" " class="btn btn-blue">
-                                <i class=" bi bi-facebook"></i>
-                            </a>
-                            <a href=" " class="btn btn-red">
-                                <i class="bi bi-envelope-at"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="well mini-profile-widget bootdey.com">
-                <div class="row g-0">
-                <div class="col-md-6">
-                    <div class="image-container">
-                        <img src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image" class="avatar img-responsive" alt="avatar">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="details">
-                        <h4>Name</h4>
-                        <hr>
-                        <div>Desc</div>
-                        <div>Desc</div>
-                        <div>Desc</div>
-                        <p class="mg-top-20">
-                            <a href=" " class="btn btn-blue">
-                                <i class=" bi bi-facebook"></i>
-                            </a>
-                            <a href=" " class="btn btn-red">
-                                <i class="bi bi-envelope-at"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
+            <div class="team-col col-lg-6 rounded-circle">
+                <div class="card-sl card border-0 pt-5 my-5 position-relative">
+                    <a href="#" class="Person-link stretched-link" style="position: relative">
+                    <div class="card-body p-4">
+                        <div class="member-profile position-absolute w-100 text-center">
+                            <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
+                        </div>
+                        <div class="card-text pt-1">
+                            <h3 class="member-name mb-0 text-center font-weight-bold">
+                                Name
+                            </h3>
+                            <div class="mb-3 text-center">Positon</div>
+                            <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
+                        </div>
+                    </div><!--//card-body-->
+                    </a>
+                    <div class="card-footer theme-bg-primary border-0 text-center">
+                        <ul class="social-list list-inline mb-0 mx-auto">
+                            <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                            <li>Phone: phone number </a></li>
+                        </ul><!--//social-list-->
+                    </div><!--//card-footer-->
+                </div><!--//card-->
+            </div><!--//col-->
     </div>
-</div>
+
+</section>
 
 
 @endsection
