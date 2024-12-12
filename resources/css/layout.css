@@ -77,11 +77,6 @@ h6 {
     margin: 3rem 0;
   }
 
-  .card {
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
   .left-card img {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;

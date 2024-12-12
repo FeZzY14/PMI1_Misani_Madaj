@@ -21,3 +21,11 @@ Route::get('/projects', function () {
 Route::get('/publications', function () {
     return view('publications');
 });
+
+Route::get('/teamMember', function () {
+    return view('teamMember');
+});
+
+Route::get('/projectDetails', function () {
+    return view('projectDetails');
+});

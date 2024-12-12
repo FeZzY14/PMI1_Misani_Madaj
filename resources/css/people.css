@@ -1,4 +1,4 @@
-.card {
+.teamCard {
     position: relative;
     -webkit-flex-direction: column;
     flex-direction: column;
@@ -17,7 +17,7 @@
     margin-bottom: 50px
 }
 
-.card:hover {
+.teamCard:hover {
     transform: scale(1.05);
 }
 

@@ -10,8 +10,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="team-col col-lg-6">
-                <div class="card-sl card border-0 pt-5 my-5 position-relative">
-                    <a href="#" class="Person-link stretched-link" style="position: relative">
+                <div class="card-sl card border-0 pt-5 my-5 position-relative teamCard">
+                    <a href="/teamMember" class="Person-link stretched-link" style="position: relative">
                     <div class="card-body p-4">
                         <div class="member-profile position-absolute w-100 text-center">
                             <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
@@ -27,16 +27,17 @@
                     </a>
                     <div class="card-footer theme-bg-primary border-0 text-center">
                         <ul class="social-list list-inline mb-0 mx-auto">
-                            <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
-                            <li>Phone: phone number </a></li>
+                            <li class="contacts"><i class="bi bi-linkedin"></i> linked in </a></li>
+                            <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                            <li class="contacts"><i class="bi bi-telephone"></i> phone number </a></li>
                         </ul><!--//social-list-->
                     </div><!--//card-footer-->
                 </div><!--//card-->
             </div><!--//col-->
 
             <div class="team-col col-lg-6">
-                <div class="card-sl card border-0 pt-5 my-5 position-relative">
-                    <a href="#" class="Person-link stretched-link" style="position: relative">
+                <div class="card-sl card border-0 pt-5 my-5 position-relative teamCard">
+                    <a href="/teamMember" class="Person-link stretched-link" style="position: relative">
                     <div class="card-body p-4">
                         <div class="member-profile position-absolute w-100 text-center">
                             <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
@@ -52,16 +53,17 @@
                     </a>
                     <div class="card-footer theme-bg-primary border-0 text-center">
                         <ul class="social-list list-inline mb-0 mx-auto">
-                            <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
-                            <li>Phone: phone number </a></li>
+                            <li class="contacts"><i class="bi bi-linkedin"></i> linked in </a></li>
+                            <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                            <li class="contacts"><i class="bi bi-telephone"></i> phone number </a></li>
                         </ul><!--//social-list-->
                     </div><!--//card-footer-->
                 </div><!--//card-->
             </div><!--//col-->
 
             <div class="team-col col-lg-6">
-                <div class="card-sl card border-0 pt-5 my-5 position-relative">
-                    <a href="#" class="Person-link stretched-link" style="position: relative">
+                <div class="card-sl card border-0 pt-5 my-5 position-relative teamCard">
+                    <a href="/teamMember" class="Person-link stretched-link" style="position: relative">
                     <div class="card-body p-4">
                         <div class="member-profile position-absolute w-100 text-center">
                             <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
@@ -77,16 +79,17 @@
                     </a>
                     <div class="card-footer theme-bg-primary border-0 text-center">
                         <ul class="social-list list-inline mb-0 mx-auto">
-                            <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
-                            <li>Phone: phone number </a></li>
+                            <li class="contacts"><i class="bi bi-linkedin"></i> linked in </a></li>
+                            <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                            <li class="contacts"><i class="bi bi-telephone"></i> phone number </a></li>
                         </ul><!--//social-list-->
                     </div><!--//card-footer-->
                 </div><!--//card-->
             </div><!--//col-->
 
             <div class="team-col col-lg-6 rounded-circle">
-                <div class="card-sl card border-0 pt-5 my-5 position-relative">
-                    <a href="#" class="Person-link stretched-link" style="position: relative">
+                <div class="card-sl card border-0 pt-5 my-5 position-relative teamCard">
+                    <a href="/teamMember" class="Person-link stretched-link" style="position: relative">
                     <div class="card-body p-4">
                         <div class="member-profile position-absolute w-100 text-center">
                             <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
@@ -102,8 +105,9 @@
                     </a>
                     <div class="card-footer theme-bg-primary border-0 text-center">
                         <ul class="social-list list-inline mb-0 mx-auto">
-                            <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
-                            <li>Phone: phone number </a></li>
+                            <li class="contacts"><i class="bi bi-linkedin"></i> linked in </a></li>
+                            <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                            <li class="contacts"><i class="bi bi-telephone"></i> phone number </a></li>
                         </ul><!--//social-list-->
                     </div><!--//card-footer-->
                 </div><!--//card-->

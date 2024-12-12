@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
         <title>App Name - @yield('title')</title>
 
@@ -12,7 +12,9 @@
             'resources/js/app.js',
             'resources/css/layout.css',
             'resources/css/home.css',
-            'resources/css/people.css'])
+            'resources/css/people.css',
+            'resources/css/teamMember.css',
+            'resources/css/publications.css',])
         <style>
           </style>
     </head>
@@ -34,7 +36,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
-                           href="/publications">Publications</a>
+                           href="/people">Team</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
@@ -42,11 +44,21 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
-                           href="/people">Peoples</a>
+                        href="/publications">Publications</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
-                           href="">About us</a>
+                           href="">Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="scrollToEnd()">About us
+                            </a>
+                           <script>
+                            function scrollToEnd() {
+                                window.scrollTo(0, document.body.scrollHeight);
+                            }
+                            </script>
                     </li>
                 </ul>
             </div>

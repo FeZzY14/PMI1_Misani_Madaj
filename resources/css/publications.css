@@ -1,0 +1,21 @@
+.publCard {
+    border: none
+}
+
+.projectButton {
+    background-color: #326273;
+    border-color: #326273;
+}
+
+.projectButton:hover {
+    background-color: #1775bb;
+    border-color: #1775bb;
+}
+
+.teamMemLink {
+    color: gray;
+}
+
+.teamMemLink:hover {
+    color: #1775bb;
+}

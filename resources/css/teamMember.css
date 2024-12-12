@@ -1,0 +1,56 @@
+.memImage {
+    width: 500px;
+    height: 500px;
+}
+
+.position {
+    color: gray;
+}
+.aboutTitle {
+    margin-top: 40px;
+}
+
+.imgCon {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about {
+    margin-bottom: 20px;
+}
+
+.publ {
+    align-content: start;
+    margin-top: 50px;
+}
+
+.contacts {
+    font-size: 20px;
+}
+
+.YearLink {
+    color: black;
+    text-decoration: none;
+    transition:  0.5s;
+}
+
+.LinkArrow {
+    transition:  0.5s;
+}
+
+.YearLink[aria-expanded="true"] {
+    .LinkArrow {
+        transform: rotateZ(180deg);
+    }
+
+}
+
+.YearLink:hover {
+    color:  #1775bb;
+    .LinkArrow {
+        color: #1775bb;
+    }
+}
+
+
+

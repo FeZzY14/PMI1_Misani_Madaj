@@ -80,8 +80,8 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="team-col col-lg-6">
-                        <div class="card-sl card border-0 pt-5 my-5 position-relative">
-                            <a href="#" class="Person-link stretched-link" style="position: relative">
+                        <div class="card-sl card border-0 pt-5 my-5 position-relative teamCard">
+                            <a href="/teamMember" class="Person-link stretched-link" style="position: relative">
                             <div class="card-body p-4">
                                 <div class="member-profile position-absolute w-100 text-center">
                                     <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
@@ -97,16 +97,17 @@
                             </a>
                             <div class="card-footer theme-bg-primary border-0 text-center">
                                 <ul class="social-list list-inline mb-0 mx-auto">
-                                    <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
-                                    <li>Phone: phone number </a></li>
+                                    <li class="contacts"><i class="bi bi-linkedin"></i> linked in </a></li>
+                <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                <li class="contacts"><i class="bi bi-telephone"></i> phone number </a></li>
                                 </ul><!--//social-list-->
                             </div><!--//card-footer-->
                         </div><!--//card-->
                     </div><!--//col-->
 
                     <div class="team-col col-lg-6">
-                        <div class="card-sl card border-0 pt-5 my-5 position-relative">
-                            <a href="#" class="Person-link stretched-link" style="position: relative">
+                        <div class="card-sl card border-0 pt-5 my-5 position-relative teamCard">
+                            <a href="/teamMember" class="Person-link stretched-link" style="position: relative">
                             <div class="card-body p-4">
                                 <div class="member-profile position-absolute w-100 text-center">
                                     <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
@@ -122,16 +123,17 @@
                             </a>
                             <div class="card-footer theme-bg-primary border-0 text-center">
                                 <ul class="social-list list-inline mb-0 mx-auto">
-                                    <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
-                                    <li>Phone: phone number </a></li>
+                                    <li class="contacts"><i class="bi bi-linkedin"></i> linked in </a></li>
+                <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                <li class="contacts"><i class="bi bi-telephone"></i> phone number </a></li>
                                 </ul><!--//social-list-->
                             </div><!--//card-footer-->
                         </div><!--//card-->
                     </div><!--//col-->
 
                     <div class="col-lg-6">
-                        <div class="card-sl card border-0 pt-5 my-5 position-relative">
-                            <a href="#" class="Person-link stretched-link" style="position: relative">
+                        <div class="card-sl card border-0 pt-5 my-5 position-relative teamCard">
+                            <a href="/teamMember" class="Person-link stretched-link" style="position: relative">
                             <div class="card-body p-4">
                                 <div class="member-profile position-absolute w-100 text-center">
                                     <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
@@ -147,16 +149,17 @@
                             </a>
                             <div class="card-footer theme-bg-primary border-0 text-center">
                                 <ul class="social-list list-inline mb-0 mx-auto">
-                                    <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
-                                    <li>Phone: phone number </a></li>
+                                    <li class="contacts"><i class="bi bi-linkedin"></i> linked in </a></li>
+                <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                <li class="contacts"><i class="bi bi-telephone"></i> phone number </a></li>
                                 </ul><!--//social-list-->
                             </div><!--//card-footer-->
                         </div><!--//card-->
                     </div><!--//col-->
 
                     <div class="col-lg-6">
-                        <div class="card-sl card border-0 pt-5 my-5 position-relative">
-                            <a href="#" class="Person-link stretched-link" style="position: relative">
+                        <div class="card-sl card border-0 pt-5 my-5 position-relative teamCard">
+                            <a href="/teamMember" class="Person-link stretched-link" style="position: relative">
                             <div class="card-body p-4">
                                 <div class="member-profile position-absolute w-100 text-center">
                                     <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
@@ -172,8 +175,9 @@
                             </a>
                             <div class="card-footer theme-bg-primary border-0 text-center">
                                 <ul class="social-list list-inline mb-0 mx-auto">
-                                    <li>Email: <a class="email-link" href="mailto:email@email.com">email address </a></li>
-                                    <li>Phone: phone number </a></li>
+                                    <li class="contacts"><i class="bi bi-linkedin"></i> linked in </a></li>
+                                    <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">email address </a></li>
+                                    <li class="contacts"><i class="bi bi-telephone"></i> phone number </a></li>
                                 </ul><!--//social-list-->
                             </div><!--//card-footer-->
                         </div><!--//card-->
@@ -185,12 +189,135 @@
 
         <h1 class="home_welcome description">Some of our projects ?</h1>
         <div class="row">
+            <div class="publications-section container overflow-hidden">
+                <div class="row gy-5">
+                    <div class="col-12">
+                        <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="img-wrapper position-relative bsb-hover-push">
+                                    <a href="/projectDetails">
+                                        <span
+                                            class="badge rounded-pill text-bg-warning position-absolute top-0 start-0 m-3">Title</span>
+                                        <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
+                                            src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image"
+                                            alt="Sports">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div>
+                                    <p class="text-secondary mb-1">Author</p>
+                                    <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
+                                            href="/projectDetails">Title</a></h2>
+                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius in quis
+                                        quidem, velit, consequuntur voluptatum quam rem exercitationem est soluta facilis
+                                        eaque voluptatibus libero sapiente ducimus quaerat at cupiditate beatae!</p>
+                                    <a class="btn btn-primary projectButton" href="/projectDetails" target="_self">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row align-items-center flex-row-reverse gy-3 gy-md-0 gx-xl-5">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="img-wrapper position-relative bsb-hover-push">
+                                    <a href="/projectDetails">
+                                        <span
+                                            class="badge rounded-pill text-bg-warning position-absolute top-0 end-0 m-3">Title</span>
+                                        <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
+                                            src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image"
+                                            alt="Travel">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div>
+                                    <p class="text-secondary mb-1">Author</p>
+                                    <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
+                                            href="/projectDetails">Title</a></h2>
+                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+                                        officiis laborum corrupti molestiae culpa esse voluptate facere ipsam eius. Est aut
+                                        iste rem fuga recusandae nisi nobis, explicabo quis excepturi?</p>
+                                    <a class="btn btn-primary projectButton" href="/projectDetails" target="_self">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="img-wrapper position-relative bsb-hover-push">
+                                    <a href="/projectDetails">
+                                        <span
+                                            class="badge rounded-pill text-bg-warning position-absolute top-0 start-0 m-3">Title</span>
+                                        <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
+                                            src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image"
+                                            alt="Photography">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div>
+                                    <p class="text-secondary mb-1">Author</p>
+                                    <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
+                                            href="/projectDetails">Title</a></h2>
+                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quo
+                                        expedita in laudantium eligendi, voluptatem, veniam eos eveniet nostrum numquam
+                                        ratione exercitationem illo vero cupiditate consequuntur explicabo? Explicabo,
+                                        pariatur officiis?</p>
+                                    <a class="btn btn-primary projectButton" href="/projectDetails" target="_self">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="btn btn-primary moreProjectsButtom text-center" href="/projects">All projects</a>
+
+            <h1 class="home_welcome public">Publications</h1>
+            <div class="card  publCard">
+                <div class="card-body">
+                  <h5 class="card-title"><h2>Title</h2></h5>
+                  <h6 class="card-subtitle mb-2 text-muted"><a class="teamMemLink" href="/teamMember">Author</a></h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <small class="text-muted">Date?</small>
+                 </div>
+            </div>
+            <div class="card  publCard">
+                <div class="card-body">
+                  <h5 class="card-title"><h2>Title</h2></h5>
+                  <h6 class="card-subtitle mb-2 text-muted"><a class="teamMemLink" href="/teamMember">Author</a></h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <small class="text-muted">Date?</small>
+                </div>
+            </div>
+            <div class="card  publCard">
+                <div class="card-body">
+                  <h5 class="card-title"><h2>Title</h2></h5>
+                  <h6 class="card-subtitle mb-2 text-muted"><a class="teamMemLink" href="/teamMember">Author</a></h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <small class="text-muted">Date?</small>
+                 </div>
+            </div>
+            <div class="card  publCard">
+                <div class="card-body">
+                  <h5 class="card-title"><h2>Title</h2></h5>
+                  <h6 class="card-subtitle mb-2 text-muted"><a class="teamMemLink" href="/teamMember">Author</a></h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <small class="text-muted">Date?</small>
+                </div>
+            </div>
+
+
+
             <div class="container">
                 <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
                     <div class="col">
-                        <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                            lc-helper="background"
-                            style="background: url(https://picsum.photos/1920/1080)  center / cover no-repeat;">
+                        <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg teamCard"
+                            lc-helper="background">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                                 <div class="lc-block pt-5 mt-5 mb-4">
                                     <div editable="rich">
@@ -199,14 +326,13 @@
                                     </div>
                                 </div>
                                 <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
-                                        class="btn btn-link btn-sm text-white stretched-link" href="#" role="button">Read more</a>
+                                        class="btn btn-link btn-sm text-white stretched-link" href="/projectDetails" role="button">Read more</a>
                                 </ul>
                             </div>
                         </div>
                     </div>
-
                     <div class="col">
-                        <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                        <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg teamCard"
                             lc-helper="background"
                             style="background:url(https://picsum.photos/1920/1080)  center / cover no-repeat;">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -218,14 +344,14 @@
                                     </div>
                                 </div>
                                 <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
-                                        class="btn btn-link btn-sm text-white stretched-link" href="#" role="button">Read more</a>
+                                        class="btn btn-link btn-sm text-white stretched-link" href="/projectDetails" role="button">Read more</a>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                        <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg teamCard"
                             lc-helper="background"
                             style="background:url(https://picsum.photos/1920/1080)  center / cover no-repeat;">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -236,14 +362,14 @@
                                     </div>
                                 </div>
                                 <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
-                                        class="btn btn-link btn-sm text-white stretched-link" href="#" role="button">Read
+                                        class="btn btn-link btn-sm text-white stretched-link" href="/projectDetails" role="button">Read
                                         more</a></ul>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                        <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg teamCard"
                             lc-helper="background"
                             style="background: url(https://picsum.photos/1920/1080)  center / cover no-repeat;">
                             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -254,156 +380,12 @@
                                     </div>
                                 </div>
                                 <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
-                                        class="btn btn-link btn-sm text-white stretched-link" href="#" role="button">Read more</a>
+                                        class="btn btn-link btn-sm text-white stretched-link" href="/projectDetails" role="button">Read more</a>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <h1 class="home_welcome public">Publications</h1>
-
-            <div class="publications-section container overflow-hidden">
-                <div class="row gy-5">
-                    <div class="col-12">
-                        <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
-                            <div class="col-xs-12 col-md-6">
-                                <div class="img-wrapper position-relative bsb-hover-push">
-                                    <a href="#!">
-                                        <span
-                                            class="badge rounded-pill text-bg-warning position-absolute top-0 start-0 m-3">Title</span>
-                                        <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
-                                            src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image"
-                                            alt="Sports">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-6">
-                                <div>
-                                    <p class="text-secondary mb-1">Nov 11, 2022</p>
-                                    <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
-                                            href="#!">Title</a></h2>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius in quis
-                                        quidem, velit, consequuntur voluptatum quam rem exercitationem est soluta facilis
-                                        eaque voluptatibus libero sapiente ducimus quaerat at cupiditate beatae!</p>
-                                    <a class="btn btn-primary" href="#!" target="_self">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="row align-items-center flex-row-reverse gy-3 gy-md-0 gx-xl-5">
-                            <div class="col-xs-12 col-md-6">
-                                <div class="img-wrapper position-relative bsb-hover-push">
-                                    <a href="#!">
-                                        <span
-                                            class="badge rounded-pill text-bg-warning position-absolute top-0 end-0 m-3">Title</span>
-                                        <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
-                                            src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image"
-                                            alt="Travel">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-6">
-                                <div>
-                                    <p class="text-secondary mb-1">Oct 9, 2022</p>
-                                    <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
-                                            href="#!">Title</a></h2>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-                                        officiis laborum corrupti molestiae culpa esse voluptate facere ipsam eius. Est aut
-                                        iste rem fuga recusandae nisi nobis, explicabo quis excepturi?</p>
-                                    <a class="btn btn-primary" href="#!" target="_self">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
-                            <div class="col-xs-12 col-md-6">
-                                <div class="img-wrapper position-relative bsb-hover-push">
-                                    <a href="#!">
-                                        <span
-                                            class="badge rounded-pill text-bg-warning position-absolute top-0 start-0 m-3">Title</span>
-                                        <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
-                                            src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image"
-                                            alt="Photography">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-6">
-                                <div>
-                                    <p class="text-secondary mb-1">Sep 17, 2022</p>
-                                    <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
-                                            href="#!">Title</a></h2>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quo
-                                        expedita in laudantium eligendi, voluptatem, veniam eos eveniet nostrum numquam
-                                        ratione exercitationem illo vero cupiditate consequuntur explicabo? Explicabo,
-                                        pariatur officiis?</p>
-                                    <a class="btn btn-primary" href="#!" target="_self">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="row align-items-center flex-row-reverse gy-3 gy-md-0 gx-xl-5">
-                            <div class="col-xs-12 col-md-6">
-                                <div class="img-wrapper position-relative bsb-hover-push">
-                                    <a href="#!">
-                                        <span
-                                            class="badge rounded-pill text-bg-warning position-absolute top-0 end-0 m-3">title</span>
-                                        <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
-                                            src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image"
-                                            alt="Food">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-6">
-                                <div>
-                                    <p class="text-secondary mb-1">Aug 23, 2022</p>
-                                    <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
-                                            href="#!">Title</a></h2>
-                                    <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam
-                                        laudantium fugiat eius obcaecati ullam, accusantium voluptas dolore pariatur
-                                        praesentium quod officiis, neque laboriosam molestiae. Accusamus totam quasi sit
-                                        ullam dolore.</p>
-                                    <a class="btn btn-primary" href="#!" target="_self">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
-                            <div class="col-xs-12 col-md-6">
-                                <div class="img-wrapper position-relative bsb-hover-push">
-                                    <a href="#!">
-                                        <span
-                                            class="badge rounded-pill text-bg-warning position-absolute top-0 end-0 m-3">Title</span>
-                                        <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
-                                            src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image"
-                                            alt="Travel">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-6">
-                                <div>
-                                    <p class="text-secondary mb-1">Oct 9, 2022</p>
-                                    <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
-                                            href="#!">Title</a></h2>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-                                        officiis laborum corrupti molestiae culpa esse voluptate facere ipsam eius. Est aut
-                                        iste rem fuga recusandae nisi nobis, explicabo quis excepturi?</p>
-                                    <a class="btn btn-primary" href="#!" target="_self">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
