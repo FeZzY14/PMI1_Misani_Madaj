@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\TeamMemberResource\Pages;
-use App\Filament\Resources\TeamMemberResource\RelationManagers;
 use App\Models\TeamMember;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
@@ -58,10 +57,11 @@ class TeamMemberResource extends Resource
                     ->label('Team Member Image')
                     ->imagePreviewHeight('250')
                     ->openable()
-                    ->getUploadedFileNameForStorageUsing(fn ($file) => $file->store('team_members', 'public')),
+                    ->getUploadedFileNameForStorageUsing(fn($file) => $file->store('team_members', 'public')),
 
             ]);
     }
+
     public static function table(Table $table): Table
     {
         return $table
@@ -69,10 +69,10 @@ class TeamMemberResource extends Resource
             ->reorderable('order')
             ->columns([
                 Tables\Columns\TextColumn::make('name')
-                ->icon('heroicon-o-user')
-                ->label('Full Name')
-                ->searchable()
-                ->sortable(),
+                    ->icon('heroicon-o-user')
+                    ->label('Full Name')
+                    ->searchable()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('position')
                     ->icon('heroicon-o-briefcase')
                     ->label('Position'),
