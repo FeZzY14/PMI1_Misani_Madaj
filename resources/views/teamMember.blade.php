@@ -7,50 +7,44 @@
 <div class="container text-center imgCon">
     <div class="row">
       <div class="col">
-        <img class="rounded-circle mx-auto d-inline-block shadow-sm memImage" src="https://picsum.photos/1920/1080">
+        <img class="rounded-circle mx-auto d-inline-block shadow-sm memImage" src="{{asset('storage/' . $team_member->image )}}">
       </div>
       <div class="col">
-        <h1>Name</h1>
-        <h3 class="position">Position</h3>
+        <h1>{{$team_member->name}}</h1>
+        <h3 class="position">{{$team_member->position}}</h3>
         <h2 class="aboutTitle">About</h2>
         <div class="about">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi amet tenetur aspernatur maiores, maxime quam necessitatibus ullam vero doloribus distinctio eius! Iure incidunt animi quas veritatis dolorem. Similique, perferendis iure.
+            {{$team_member->about}}
         </div>
         <div class="card-footer theme-bg-primary border-0 text-center">
             <ul class="social-list list-inline mb-0 mx-auto">
-                <li class="contacts"><i class="bi bi-linkedin"></i> linked in </a></li>
-                <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">email address </a></li>
-                <li class="contacts"><i class="bi bi-telephone"></i> phone number </a></li>
+                <li class="contacts"><i class="bi bi-linkedin"></i> {{$team_member->linkedIn}} </a></li>
+                <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">{{$team_member->email}} </a></li>
+                <li class="contacts"><i class="bi bi-telephone"></i> {{$team_member->phone_number}} </a></li>
             </ul>
         </div>
       </div>
     </div>
     <div class="row publ text-start">
         <h2>Publications</h2>
-        <h2><a class="YearLink" data-bs-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
-        2020 <img src="/assets/caret-down-fill.svg" class="LinkArrow" alt="Arrow" width="32" height="32">
-        </a></h2>
-        <div class="collapse" id="collapse1">
-            <div>
-                W. Castellanos, J. C. Guerri, and P. Arce, “SVCEval-RA: an evaluation framework for adaptive scalable video streaming,” Multimedia Tools and Applications, vol. 76, no. 1, pp. 437-461, 2017.
+        @foreach ($groupedPublications as $year => $publications)
+            <h3>
+                <a class="YearLink" data-bs-toggle="collapse" href="#collapse-{{ $year }}" role="button" aria-expanded="false" aria-controls="collapse-{{ $year }}">
+                    {{ $year }} <img src="/assets/caret-down-fill.svg" class="LinkArrow" alt="Arrow" width="32" height="32">
+                </a>
+            </h3>
+
+            <div class="collapse" id="collapse-{{ $year }}">
+                @foreach ($publications as $publication)
+                    <div>
+                        @foreach ($publication->authors as $author)
+                            <span>{{ $author->name }}</span>@if (!$loop->last), @endif
+                        @endforeach “{{ $publication->title }},”  {{ $publication->body }}, {{ $publication->publication_date }}.
+                    </div>
+                @endforeach
             </div>
-        </div>
-        <h2><a class="YearLink" data-bs-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">
-        2018 <img src="/assets/caret-down-fill.svg" class="LinkArrow" alt="Arrow" width="32" height="32">
-        </a></h2>
-        <div class="collapse" id="collapse2">
-            <div>
-                W. Castellanos, J. C. Guerri, and P. Arce, “SVCEval-RA: an evaluation framework for adaptive scalable video streaming,” Multimedia Tools and Applications, vol. 76, no. 1, pp. 437-461, 2017.
-            </div>
-        </div>
-        <h2><a class="YearLink" data-bs-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapse3">
-        2016 <img src="/assets/caret-down-fill.svg" class="LinkArrow" alt="Arrow" width="32" height="32">
-        </a></h2>
-        <div class="collapse" id="collapse3">
-            <div>
-                W. Castellanos, J. C. Guerri, and P. Arce, “SVCEval-RA: an evaluation framework for adaptive scalable video streaming,” Multimedia Tools and Applications, vol. 76, no. 1, pp. 437-461, 2017.
-            </div>
-        </div>
+        @endforeach
+
         <h2>Projects</h2>
         <h2>Teaching</h2>
     </div>

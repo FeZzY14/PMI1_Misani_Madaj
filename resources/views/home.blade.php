@@ -79,109 +79,35 @@
         <section class="team-section py-10">
             <div class="container">
                 <div class="row justify-content-center">
+                    @foreach($team_members as $team_member)
+                        @if($team_member->show_homepage)
                     <div class="team-col col-lg-6">
                         <div class="card-sl card border-0 pt-5 my-5 position-relative teamCard">
-                            <a href="/teamMember" class="Person-link stretched-link" style="position: relative">
+                            <a href="/teamMember/{{ $team_member->id }}" class="Person-link stretched-link" style="position: relative">
                             <div class="card-body p-4">
                                 <div class="member-profile position-absolute w-100 text-center">
-                                    <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
+                                    <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="{{asset('storage/' . $team_member->image )}}" alt="">
                                 </div>
                                 <div class="card-text pt-1">
                                     <h3 class="member-name mb-0 text-center font-weight-bold">
-                                        Name
+                                        {{$team_member->name}}
                                     </h3>
-                                    <div class="mb-3 text-center">Positon</div>
-                                    <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
+                                    <div class="mb-3 text-center"> {{$team_member->position}}</div>
+                                    <div>{{$team_member->about}}</div>
                                 </div>
                             </div><!--//card-body-->
                             </a>
                             <div class="card-footer theme-bg-primary border-0 text-center">
                                 <ul class="social-list list-inline mb-0 mx-auto">
-                                    <li class="contacts"><i class="bi bi-linkedin"></i> linked in </a></li>
-                <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">email address </a></li>
-                <li class="contacts"><i class="bi bi-telephone"></i> phone number </a></li>
+                                    <li class="contacts"><i class="bi bi-linkedin"></i> {{$team_member->linkedIn}} </a></li>
+                                    <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">{{$team_member->email}} </a></li>
+                                    <li class="contacts"><i class="bi bi-telephone"></i> {{$team_member->phone_number}} </a></li>
                                 </ul><!--//social-list-->
                             </div><!--//card-footer-->
                         </div><!--//card-->
                     </div><!--//col-->
-
-                    <div class="team-col col-lg-6">
-                        <div class="card-sl card border-0 pt-5 my-5 position-relative teamCard">
-                            <a href="/teamMember" class="Person-link stretched-link" style="position: relative">
-                            <div class="card-body p-4">
-                                <div class="member-profile position-absolute w-100 text-center">
-                                    <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
-                                </div>
-                                <div class="card-text pt-1">
-                                    <h3 class="member-name mb-0 text-center font-weight-bold">
-                                        Name
-                                    </h3>
-                                    <div class="mb-3 text-center">Positon</div>
-                                    <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
-                                </div>
-                            </div><!--//card-body-->
-                            </a>
-                            <div class="card-footer theme-bg-primary border-0 text-center">
-                                <ul class="social-list list-inline mb-0 mx-auto">
-                                    <li class="contacts"><i class="bi bi-linkedin"></i> linked in </a></li>
-                <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">email address </a></li>
-                <li class="contacts"><i class="bi bi-telephone"></i> phone number </a></li>
-                                </ul><!--//social-list-->
-                            </div><!--//card-footer-->
-                        </div><!--//card-->
-                    </div><!--//col-->
-
-                    <div class="col-lg-6">
-                        <div class="card-sl card border-0 pt-5 my-5 position-relative teamCard">
-                            <a href="/teamMember" class="Person-link stretched-link" style="position: relative">
-                            <div class="card-body p-4">
-                                <div class="member-profile position-absolute w-100 text-center">
-                                    <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
-                                </div>
-                                <div class="card-text pt-1">
-                                    <h3 class="member-name mb-0 text-center font-weight-bold">
-                                        Name
-                                    </h3>
-                                    <div class="mb-3 text-center">Positon</div>
-                                    <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
-                                </div>
-                            </div><!--//card-body-->
-                            </a>
-                            <div class="card-footer theme-bg-primary border-0 text-center">
-                                <ul class="social-list list-inline mb-0 mx-auto">
-                                    <li class="contacts"><i class="bi bi-linkedin"></i> linked in </a></li>
-                <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">email address </a></li>
-                <li class="contacts"><i class="bi bi-telephone"></i> phone number </a></li>
-                                </ul><!--//social-list-->
-                            </div><!--//card-footer-->
-                        </div><!--//card-->
-                    </div><!--//col-->
-
-                    <div class="col-lg-6">
-                        <div class="card-sl card border-0 pt-5 my-5 position-relative teamCard">
-                            <a href="/teamMember" class="Person-link stretched-link" style="position: relative">
-                            <div class="card-body p-4">
-                                <div class="member-profile position-absolute w-100 text-center">
-                                    <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://picsum.photos/1920/1080" alt="">
-                                </div>
-                                <div class="card-text pt-1">
-                                    <h3 class="member-name mb-0 text-center font-weight-bold">
-                                        Name
-                                    </h3>
-                                    <div class="mb-3 text-center">Positon</div>
-                                    <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Vivamus eget eros vestibulum, accumsan ante viverra, condimentum tellus. Curabitur pellentesque convallis purus non ornare. Donec bibendum sed purus dignissim rutrum. Maecenas bibendum feugiat est, et venenatis nunc.</div>
-                                </div>
-                            </div><!--//card-body-->
-                            </a>
-                            <div class="card-footer theme-bg-primary border-0 text-center">
-                                <ul class="social-list list-inline mb-0 mx-auto">
-                                    <li class="contacts"><i class="bi bi-linkedin"></i> linked in </a></li>
-                                    <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">email address </a></li>
-                                    <li class="contacts"><i class="bi bi-telephone"></i> phone number </a></li>
-                                </ul><!--//social-list-->
-                            </div><!--//card-footer-->
-                        </div><!--//card-->
-                    </div><!--//col-->
+                        @endif
+                    @endforeach
             </div>
 
         </section>
@@ -191,13 +117,14 @@
         <div class="row">
             <div class="publications-section container overflow-hidden">
                 <div class="row gy-5">
+                    @foreach($projects as $project)
                     <div class="col-12">
                         <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
                             <div class="col-xs-12 col-md-6">
                                 <div class="img-wrapper position-relative bsb-hover-push">
                                     <a href="/projectDetails">
                                         <span
-                                            class="badge rounded-pill text-bg-warning position-absolute top-0 start-0 m-3">Title</span>
+                                            class="badge rounded-pill text-bg-warning position-absolute top-0 start-0 m-3">{{$project->title}}</span>
                                         <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
                                             src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image"
                                             alt="Sports">
@@ -206,110 +133,42 @@
                             </div>
                             <div class="col-xs-12 col-md-6">
                                 <div>
-                                    <p class="text-secondary mb-1">Author</p>
+                                    @foreach ($project->authors as $author)
+                                        <a class="teamMemLink" href="/teamMember/{{$author->id}}">
+                                            <span>{{ $author->name }}</span>@if (!$loop->last), @endif
+                                            @endforeach
+                                        </a>
                                     <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
-                                            href="/projectDetails">Title</a></h2>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius in quis
-                                        quidem, velit, consequuntur voluptatum quam rem exercitationem est soluta facilis
-                                        eaque voluptatibus libero sapiente ducimus quaerat at cupiditate beatae!</p>
+                                            href="/projectDetails">{{$project->title}}</a></h2>
+                                    <p class="mb-4">{{$project->abstract}}</p>
                                     <a class="btn btn-primary projectButton" href="/projectDetails" target="_self">Read More</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    @endforeach
 
-                    <div class="col-12">
-                        <div class="row align-items-center flex-row-reverse gy-3 gy-md-0 gx-xl-5">
-                            <div class="col-xs-12 col-md-6">
-                                <div class="img-wrapper position-relative bsb-hover-push">
-                                    <a href="/projectDetails">
-                                        <span
-                                            class="badge rounded-pill text-bg-warning position-absolute top-0 end-0 m-3">Title</span>
-                                        <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
-                                            src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image"
-                                            alt="Travel">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-6">
-                                <div>
-                                    <p class="text-secondary mb-1">Author</p>
-                                    <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
-                                            href="/projectDetails">Title</a></h2>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-                                        officiis laborum corrupti molestiae culpa esse voluptate facere ipsam eius. Est aut
-                                        iste rem fuga recusandae nisi nobis, explicabo quis excepturi?</p>
-                                    <a class="btn btn-primary projectButton" href="/projectDetails" target="_self">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
-                            <div class="col-xs-12 col-md-6">
-                                <div class="img-wrapper position-relative bsb-hover-push">
-                                    <a href="/projectDetails">
-                                        <span
-                                            class="badge rounded-pill text-bg-warning position-absolute top-0 start-0 m-3">Title</span>
-                                        <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
-                                            src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image"
-                                            alt="Photography">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-6">
-                                <div>
-                                    <p class="text-secondary mb-1">Author</p>
-                                    <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
-                                            href="/projectDetails">Title</a></h2>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quo
-                                        expedita in laudantium eligendi, voluptatem, veniam eos eveniet nostrum numquam
-                                        ratione exercitationem illo vero cupiditate consequuntur explicabo? Explicabo,
-                                        pariatur officiis?</p>
-                                    <a class="btn btn-primary projectButton" href="/projectDetails" target="_self">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <a class="btn btn-primary moreProjectsButtom text-center" href="/projects">All projects</a>
 
             <h1 class="home_welcome public">Publications</h1>
-            <div class="card  publCard">
-                <div class="card-body">
-                  <h5 class="card-title"><h2>Title</h2></h5>
-                  <h6 class="card-subtitle mb-2 text-muted"><a class="teamMemLink" href="/teamMember">Author</a></h6>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <small class="text-muted">Date?</small>
-                 </div>
-            </div>
-            <div class="card  publCard">
-                <div class="card-body">
-                  <h5 class="card-title"><h2>Title</h2></h5>
-                  <h6 class="card-subtitle mb-2 text-muted"><a class="teamMemLink" href="/teamMember">Author</a></h6>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <small class="text-muted">Date?</small>
+
+            @foreach($publications as $publication)
+                <div class="card  publCard">
+                    <div class="card-body">
+                        <h5 class="card-title"><h2>{{$publication->title}}</h2></h5>
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            @foreach ($publication->authors as $author)
+                                <a class="teamMemLink" href="/teamMember/{{$author->id}}">
+                                    <span>{{ $author->name }}</span>@if (!$loop->last), @endif
+                                    @endforeach
+                                </a>
+                        </h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <small class="text-muted">{{$publication->publication_date}}</small>
+                    </div>
                 </div>
-            </div>
-            <div class="card  publCard">
-                <div class="card-body">
-                  <h5 class="card-title"><h2>Title</h2></h5>
-                  <h6 class="card-subtitle mb-2 text-muted"><a class="teamMemLink" href="/teamMember">Author</a></h6>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <small class="text-muted">Date?</small>
-                 </div>
-            </div>
-            <div class="card  publCard">
-                <div class="card-body">
-                  <h5 class="card-title"><h2>Title</h2></h5>
-                  <h6 class="card-subtitle mb-2 text-muted"><a class="teamMemLink" href="/teamMember">Author</a></h6>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <small class="text-muted">Date?</small>
-                </div>
-            </div>
+            @endforeach
 
 
 
