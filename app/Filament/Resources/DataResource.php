@@ -2,10 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PublicationResource\Pages;
-use App\Filament\Resources\PublicationResource\RelationManagers;
-use App\Models\Publication;
-use App\Models\TeamMember;
+use App\Filament\Resources\DataResource\Pages;
+use App\Filament\Resources\DataResource\RelationManagers;
+use App\Models\Data;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,9 +13,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class PublicationResource extends Resource
+class DataResource extends Resource
 {
-    protected static ?string $model = Publication::class;
+    protected static ?string $model = Data::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -27,26 +26,16 @@ class PublicationResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('body')
-                    ->required(),
-                Forms\Components\DatePicker::make('publication_date')
-                    ->required(),
-                Forms\Components\Select::make('authors')
-                    ->multiple()
-                    ->relationship('authors', 'name')
-                    ->label('Authors'),
-                Forms\Components\Checkbox::make('show_homepage')
-                    ->label('Will be Shown on Homepage')
-                    ->default(false),
-
+                Forms\Components\FileUpload::make('file')
+                    ->directory('data')
+                    ->visibility('public')
+                    ->getUploadedFileNameForStorageUsing(fn($file) => $file->store('datas', 'public')),
             ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
-            ->query(Publication::orderBy('order', 'asc'))
-            ->reorderable('order')
             ->columns([
                 Tables\Columns\TextColumn::make('title')
                     ->icon('heroicon-o-book-open')
@@ -77,9 +66,9 @@ class PublicationResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListPublications::route('/'),
-            'create' => Pages\CreatePublication::route('/create'),
-            'edit' => Pages\EditPublication::route('/{record}/edit'),
+            'index' => Pages\ListData::route('/'),
+            'create' => Pages\CreateData::route('/create'),
+            'edit' => Pages\EditData::route('/{record}/edit'),
         ];
     }
 }

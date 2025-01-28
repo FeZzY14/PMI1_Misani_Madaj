@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Data;
+use App\Models\Project;
 use App\Models\Publication;
 use Illuminate\Support\Facades\Route;
 
@@ -11,10 +13,16 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/data', function () {
+    $data = Data::all();
+    return view('data', compact("data"));
+});
+
 Route::get('/people', [\App\Http\Controllers\TeamMemberController::class, "index"]);
 
 Route::get('/projects', function () {
-    return view('projects');
+    $projects = Project::all();
+    return view('projects', compact("projects"));
 });
 
 Route::get('/publications', function () {
@@ -24,7 +32,6 @@ Route::get('/publications', function () {
 
 Route::get('/teamMember/{id}', function ($id) {
     $team_member = App\Models\TeamMember::with(['publications' => function ($query) {
-        // Sort the publications by year (descending or ascending)
         $query->orderByRaw('YEAR(publications.publication_date) DESC');
     }])->findOrFail($id);
 
@@ -34,6 +41,7 @@ Route::get('/teamMember/{id}', function ($id) {
     return view('teamMember', compact('team_member', 'groupedPublications'));
 });
 
-Route::get('/projectDetails', function () {
-    return view('projectDetails');
+Route::get('/projectDetails/{id}', function ($id) {
+    $project = Project::query()->findOrFail($id);
+    return view('projectDetails', compact("project"));
 });

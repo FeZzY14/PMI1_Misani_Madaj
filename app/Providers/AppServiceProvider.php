@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Project;
 use App\Models\Publication;
+use App\Models\Teaching;
 use App\Models\TeamMember;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\View;
@@ -31,10 +32,12 @@ class AppServiceProvider extends ServiceProvider
                 $team_members = TeamMember::orderBy('order')->get();
                 $publications = Publication::all();
                 $projects = Project::all();
+                $teachings = Teaching::all();
 
                 $view->with('team_members', $team_members)
                     ->with('publications', $publications)
-                    ->with('projects', $projects);
+                    ->with('projects', $projects)
+                    ->with('teachings', $teachings);
             }
         );
     }

@@ -14,11 +14,13 @@ return new class extends Migration
         Schema::create('team_members', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('position');
-            $table->string('email');
-            $table->string('linkedIn');
-            $table->string('phone_number');
-            $table->string('about');
+            $table->string('position')->nullable();
+            $table->string('email')->nullable();
+            $table->string('linkedIn')->nullable();
+            $table->string('researchgate')->nullable();
+            $table->string('orcid')->nullable();
+            $table->string('phone_number')->nullable();
+            $table->text('about')->nullable();
             $table->timestamps();
             $table->integer('order')->default(0);
             $table->string('image')->nullable();

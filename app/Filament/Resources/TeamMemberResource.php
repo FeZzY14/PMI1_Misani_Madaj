@@ -27,12 +27,10 @@ class TeamMemberResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('position')
-                    ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('about')
+                Forms\Components\Textarea::make('about')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('email')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('linkedIn')
                     ->maxLength(255),
@@ -46,9 +44,6 @@ class TeamMemberResource extends Resource
                     ->multiple()
                     ->relationship('projects', 'title')
                     ->label('Projects'),
-                Forms\Components\Checkbox::make('show_homepage')
-                    ->label('Will be Shown on Homepage')
-                    ->default(false),
                 FileUpload::make('image')
                     ->image()
                     ->directory('team_members')
@@ -58,6 +53,9 @@ class TeamMemberResource extends Resource
                     ->imagePreviewHeight('250')
                     ->openable()
                     ->getUploadedFileNameForStorageUsing(fn($file) => $file->store('team_members', 'public')),
+                Forms\Components\Checkbox::make('show_homepage')
+                    ->label('Will be Shown on Homepage')
+                    ->default(false),
 
             ]);
     }

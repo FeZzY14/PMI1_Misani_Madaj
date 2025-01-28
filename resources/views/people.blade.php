@@ -28,10 +28,38 @@
                     </a>
                     <div class="card-footer theme-bg-primary border-0 text-center">
                         <ul class="social-list list-inline mb-0 mx-auto">
-                            <li class="contacts"><i class="bi bi-linkedin"></i> {{$team_member->linkedIn}} </a></li>
-                            <li class="contacts"><i class="bi bi-envelope"></i> <a class="email-link" href="mailto:email@email.com">{{$team_member->email}} </a></li>
-                            <li class="contacts"><i class="bi bi-telephone"></i> {{$team_member->phone_number}} </a></li>
-                        </ul><!--//social-list-->
+                            @if(!empty($team_member->linkedIn))
+                                <li class="contacts"><i class="bi bi-linkedin"></i> <a href="{{ $team_member->linkedIn }}"
+                                                                                       target="_blank">LinkedIn</a></li>
+                            @endif
+
+                            @if(!empty($team_member->researchGate))
+                                <li class="contacts">
+                                    <img src="https://help.researchgate.net/hc/theming_assets/01HZPWT1CS5WRP04ZJX0DM6135"
+                                         alt="" style="width: 30px">
+                                    <a href="{{ $team_member->researchGate }}" target="_blank">Research Gate</a>
+                                </li>
+                            @endif
+
+                            @if(!empty($team_member->orcid))
+                                <li class="contacts">
+                                    <img src="https://www.svgrepo.com/show/314412/orcid.svg" alt="" style="width: 30px">
+                                    <a href="{{ $team_member->orcid }}" target="_blank">ORCID</a>
+                                </li>
+                            @endif
+
+                            @if(!empty($team_member->email))
+                                <li class="contacts">
+                                    <i class="bi bi-envelope"></i>
+                                    <a class="email-link"
+                                       href="mailto:{{ $team_member->email }}">{{ $team_member->email }}</a>
+                                </li>
+                            @endif
+                            @if(!empty($team_member->płhone_number))
+                                <li class="contacts"><i class="bi bi-telephone"></i> {{$team_member->phone_number}}
+                                </li>
+                            @endif
+                        </ul>
                     </div><!--//card-footer-->
                 </div><!--//card-->
             </div><!--//col-->

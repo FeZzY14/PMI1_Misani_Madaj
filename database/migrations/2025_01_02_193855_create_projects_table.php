@@ -14,12 +14,14 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('type');
-            $table->string('abstract');
-            $table->string('link');
+            $table->string('type')->nullable();
+            $table->text('abstract')->nullable();
+            $table->text('body')->nullable();
+            $table->string('link')->nullable();
             $table->string('image')->nullable();
-            $table->date('project_date');
+            $table->date('project_date')->nullable();
             $table->timestamps();
+            $table->integer('order')->default(0);
             $table->boolean("show_homepage")->default(false);
         });
     }
