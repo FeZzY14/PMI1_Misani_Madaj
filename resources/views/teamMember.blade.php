@@ -7,8 +7,13 @@
     <div class="container text-center imgCon">
         <div class="row">
             <div class="col">
-                <img class="rounded-circle mx-auto d-inline-block shadow-sm memImage"
-                     src="{{asset('storage/' . $team_member->image )}}">
+                @if(empty($team_member->image))
+                    <img  src="https://placehold.co/1200x1200?text={{$team_member->name}}" class="rounded-circle mx-auto d-inline-block shadow-sm memImage"
+                          alt="{{ $team_member->title }}">
+                @else
+                    <img class="rounded-circle mx-auto d-inline-block shadow-sm memImage"
+                         src="{{asset('storage/' . $team_member->image )}}" alt="">
+                @endif
             </div>
             <div class="col">
                 <h1>{{$team_member->name}}</h1>
@@ -24,11 +29,11 @@
                                                                                    target="_blank">LinkedIn</a></li>
                         @endif
 
-                        @if(!empty($team_member->researchGate))
+                        @if(!empty($team_member->researchgate))
                             <li class="contacts">
                                 <img src="https://help.researchgate.net/hc/theming_assets/01HZPWT1CS5WRP04ZJX0DM6135"
                                      alt="" style="width: 30px">
-                                <a href="{{ $team_member->researchGate }}" target="_blank">Research Gate</a>
+                                <a href="{{ $team_member->researchgate }}" target="_blank">Research Gate</a>
                             </li>
                         @endif
 

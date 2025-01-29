@@ -15,7 +15,13 @@
                     <a href="/teamMember/{{$team_member->id}}" class="Person-link stretched-link" style="position: relative">
                     <div class="card-body p-4">
                         <div class="member-profile position-absolute w-100 text-center">
-                            <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="{{asset('storage/' . $team_member->image )}}" alt="">
+                            @if(empty($team_member->image))
+                                <img  src="https://placehold.co/1200x1200?text={{$team_member->name}}" class="rounded-circle mx-auto d-inline-block shadow-sm"
+                                      alt="{{ $team_member->title }}">
+                            @else
+                                <img class="rounded-circle mx-auto d-inline-block shadow-sm"
+                                     src="{{asset('storage/' . $team_member->image )}}" alt="">
+                            @endif
                         </div>
                         <div class="card-text pt-1">
                             <h3 class="member-name mb-0 text-center font-weight-bold">
@@ -33,11 +39,11 @@
                                                                                        target="_blank">LinkedIn</a></li>
                             @endif
 
-                            @if(!empty($team_member->researchGate))
+                            @if(!empty($team_member->researchgate))
                                 <li class="contacts">
                                     <img src="https://help.researchgate.net/hc/theming_assets/01HZPWT1CS5WRP04ZJX0DM6135"
                                          alt="" style="width: 30px">
-                                    <a href="{{ $team_member->researchGate }}" target="_blank">Research Gate</a>
+                                    <a href="{{ $team_member->researchgate }}" target="_blank">Research Gate</a>
                                 </li>
                             @endif
 
