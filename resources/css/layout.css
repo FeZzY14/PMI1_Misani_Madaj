@@ -115,3 +115,11 @@ h6 {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+@keyframes fadeHighlight {
+    0% { background-color: rgba(36, 137, 248, 0.3); } /* Light yellow */
+}
+
+.flash-effect {
+    animation: fadeHighlight 1.5s ease-in-out;
+}

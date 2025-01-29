@@ -13,9 +13,20 @@
                         <div class="col-xs-12 col-md-6">
                             <div class="img-wrapper position-relative bsb-hover-push">
                                 <a href="/projectDetails/{{$project->id}}">
-                                    <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
-                                         src="https://placehold.jp/30/1775bb/ffffff/600x400.png?text=placeholder+image"
-                                         alt="Sports">
+                                    @if(empty($project->image))
+                                        <div class="ratio ratio-16x9">
+                                            <img src="https://placehold.co/1200x12000?text={{$project->title}}"
+                                                 class="img-fluid rounded-5 object-fit-cover"
+                                                 alt="{{ $project->title }}">
+                                        </div>
+                                    @else
+                                        <div class="ratio ratio-16x9">
+                                            <img class="img-fluid rounded-5 object-fit-cover"
+                                                 loading="lazy"
+                                                 src="{{ asset('storage/' . $project->image) }}"
+                                                 alt="{{ $project->title }}">
+                                        </div>
+                                    @endif
                                 </a>
                             </div>
                         </div>
@@ -42,6 +53,15 @@
                 </div>
             @endforeach
         </div>
+
+        <div class="row mt-5">
+            <div class="col-12 d-flex flex-column align-items-center">
+                <nav aria-label="Projects Pagination">
+                    {{ $projects->links('pagination::bootstrap-5') }}
+                </nav>
+            </div>
+        </div>
+
     </div>
 
 @endsection

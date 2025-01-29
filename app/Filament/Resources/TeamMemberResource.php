@@ -33,7 +33,14 @@ class TeamMemberResource extends Resource
                 Forms\Components\TextInput::make('email')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('linkedIn')
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->label('Link to LinkedIn profile'),
+                Forms\Components\TextInput::make('orcid')
+                    ->maxLength(255)
+                    ->label('Link to Orcid profile'),
+                Forms\Components\TextInput::make('researchgate')
+                    ->maxLength(255)
+                    ->label('Link to Research Gate profile'),
                 Forms\Components\TextInput::make('phone_number')
                     ->maxLength(255),
                 Forms\Components\Select::make('publications')
@@ -44,6 +51,13 @@ class TeamMemberResource extends Resource
                     ->multiple()
                     ->relationship('projects', 'title')
                     ->label('Projects'),
+                Forms\Components\Select::make('teachings')
+                    ->multiple()
+                    ->relationship('teachings', 'title')
+                    ->label('Teaching Subjects'),
+                Forms\Components\Checkbox::make('show_homepage')
+                    ->label('Will be Shown on Homepage')
+                    ->default(false),
                 FileUpload::make('image')
                     ->image()
                     ->directory('team_members')
@@ -53,9 +67,7 @@ class TeamMemberResource extends Resource
                     ->imagePreviewHeight('250')
                     ->openable()
                     ->getUploadedFileNameForStorageUsing(fn($file) => $file->store('team_members', 'public')),
-                Forms\Components\Checkbox::make('show_homepage')
-                    ->label('Will be Shown on Homepage')
-                    ->default(false),
+
 
             ]);
     }

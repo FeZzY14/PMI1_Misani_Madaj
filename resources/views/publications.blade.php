@@ -24,6 +24,13 @@
             </div>
         @endforeach
 
+            <div class="row mt-5">
+                <div class="col-12 d-flex flex-column align-items-center">
+                    <nav aria-label="Publications Pagination">
+                        {{ $publications->links('pagination::bootstrap-5') }}
+                    </nav>
+                </div>
+            </div>
     </div>
 
 @endsection

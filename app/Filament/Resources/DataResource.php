@@ -38,7 +38,7 @@ class DataResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->icon('heroicon-o-book-open')
+                    ->icon('heroicon-o-circle-stack')
                     ->label('Title')
                     ->searchable()
                     ->sortable(),

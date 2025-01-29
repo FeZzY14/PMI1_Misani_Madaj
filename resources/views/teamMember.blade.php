@@ -46,7 +46,7 @@
                                    href="mailto:{{ $team_member->email }}">{{ $team_member->email }}</a>
                             </li>
                         @endif
-                        @if(!empty($team_member->płhone_number))
+                        @if(!empty($team_member->phone_number))
                             <li class="contacts"><i class="bi bi-telephone"></i> {{$team_member->phone_number}}
                             </li>
                         @endif
@@ -69,8 +69,7 @@
                     @foreach ($publications as $publication)
                         <div>
                             @foreach ($publication->authors as $author)
-                                <span>{{ $author->name }}</span>@if (!$loop->last)
-                                    ,
+                                <span>{{ $author->name }}</span>@if (!$loop->last),
                                 @endif
                             @endforeach “{{ $publication->title }}”, {{ $publication->body }}
                             , {{ $publication->publication_date }}.
@@ -79,69 +78,44 @@
                 </div>
             @endforeach
 
+
             <h2>Projects</h2>
+            @foreach ($groupedProjects as $year => $projects)
+                <h3>
+                    <a class="YearLink" data-bs-toggle="collapse" href="#collapse-p-{{ $year }}" role="button"
+                       aria-expanded="false" aria-controls="collapse-p-{{ $year }}">
+                        {{ $year }} <img src="/assets/caret-down-fill.svg" class="LinkArrow" alt="Arrow" width="32"
+                                         height="32">
+                    </a>
+                </h3>
+
+                <div class="collapse" id="collapse-p-{{ $year }}">
+                    @foreach ($projects as $project)
+                        <div>
+                            @foreach ($project->authors as $author)
+                                <div>
+                                    <a class="teamMemLink" href="/teamMember/{{$author->id}}">
+                                        <span>{{ $author->name }}</span>@if (!$loop->last)
+                                            ,
+                                        @endif
+                                    </a>
+                                </div>
+                            @endforeach
+                            <p class="link-dark text-decoration-none h3 mb-0">{{$project->title}}</p>
+                            <p class="text-truncate mb-2">{{$project->abstract}}</p>
+                            <a class="btn btn-sm btn-primary projectButton mt-0" href="/projectDetails/{{$project->id}}"
+                               target="_self">Read More</a>
+                        </div>
+                        <hr>
+                    @endforeach
+                </div>
+            @endforeach
             <h2>Teaching</h2>
-        </div>
-        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-            <div class="col">
-                <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                     lc-helper="background"
-                     style="background: url(https://picsum.photos/1920/1080)  center / cover no-repeat;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <div class="lc-block pt-5 mt-5 mb-4">
-                            <div editable="rich">
-                                <h2 class="display-6 lh-1 fw-bold">Short title, long jacket</h2>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut voluptatem cum vero
-                                    obcaecati quod ipsam! Nostrum, molestias. Doloribus ut sapiente necessitatibus amet
-                                    quaerat quidem eaque harum optio repellendus! Incidunt, cumque?</p>
-                            </div>
-                        </div>
-                        <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
-                                class="btn btn-link btn-sm text-white stretched-link" href="/projectDetails"
-                                role="button">Read more</a>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                     lc-helper="background"
-                     style="background:url(https://picsum.photos/1920/1080)  center / cover no-repeat;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <div class="lc-block pt-5 mt-5 mb-4">
-                            <div editable="rich">
-                                <h2 class="display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines
-                                </h2>
-                                <p>description</p>
-                            </div>
-                        </div>
-                        <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
-                                class="btn btn-link btn-sm text-white stretched-link" href="/projectDetails"
-                                role="button">Read more</a>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="lc-block card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                     lc-helper="background"
-                     style="background:url(https://picsum.photos/1920/1080)  center / cover no-repeat;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <div class="lc-block pt-5 mt-5 mb-4">
-                            <div editable="rich">
-                                <h2 class="display-6 lh-1 fw-bold">Another longer title belongs here</h2>
-                                <p>description</p>
-                            </div>
-                        </div>
-                        <ul class="lc-block d-flex list-unstyled mt-auto ms-auto"><a
-                                class="btn btn-link btn-sm text-white stretched-link" href="/projectDetails"
-                                role="button">Read
-                                more</a></ul>
-                    </div>
-                </div>
-            </div>
+            <span class="h5">
+                @foreach($team_member->teachings as $teaching)
+                    {{ $teaching->title }}{{ !$loop->last ? ', ' : '' }}
+                @endforeach
+            </span>
         </div>
     </div>
 

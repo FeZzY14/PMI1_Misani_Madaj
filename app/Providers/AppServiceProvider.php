@@ -30,9 +30,9 @@ class AppServiceProvider extends ServiceProvider
             ['home', 'people'],
             function ($view) {
                 $team_members = TeamMember::orderBy('order')->get();
-                $publications = Publication::all();
-                $projects = Project::all();
-                $teachings = Teaching::all();
+                $publications = Publication::orderBy('order')->get();
+                $projects = Project::orderBy('order')->get();
+                $teachings = Teaching::orderBy('order')->get();
 
                 $view->with('team_members', $team_members)
                     ->with('publications', $publications)

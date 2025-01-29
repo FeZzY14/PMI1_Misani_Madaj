@@ -22,14 +22,16 @@
                         <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
                             <div class="ratio ratio-16x9">
                                 @if(empty($teaching->image))
-                                    <img src="https://placehold.co/1000x5000?text=Project" class="d-block w-100" alt="{{ $teaching->title }}">
+                                    <img src="https://placehold.co/1200x1200?text={{$teaching->title}}" class="d-block w-100"
+                                         alt="{{ $teaching->title }}">
                                 @else
-                                    <img src="{{asset('storage/' . $teaching->image )}}" class="d-block w-100" alt="{{ $teaching->title }}">
+                                    <img src="{{asset('storage/' . $teaching->image )}}" class="d-block w-100"
+                                         alt="{{ $teaching->title }}">
                                 @endif
                             </div>
                             <div class="carousel-caption">
                                 <h5 class="caption-title">{{ $teaching->title }}</h5>
-                                <p class="caption text-break">{{ $teaching->body }}</p>
+                                <p class="caption text-break ">{{ $teaching->body }}</p>
                             </div>
                         </div>
                     @endforeach
@@ -60,8 +62,13 @@
                                        style="position: relative">
                                         <div class="card-body p-4">
                                             <div class="member-profile position-absolute w-100 text-center">
+                                                @if(empty($teaching->image))
+                                                    <img  src="https://placehold.co/1200x1200?text={{$team_member->name}}" class="rounded-circle mx-auto d-inline-block shadow-sm"
+                                                         alt="{{ $team_member->title }}">
+                                                @else
                                                 <img class="rounded-circle mx-auto d-inline-block shadow-sm"
                                                      src="{{asset('storage/' . $team_member->image )}}" alt="">
+                                                @endif
                                             </div>
                                             <div class="card-text pt-1">
                                                 <h3 class="member-name mb-0 text-center font-weight-bold">
@@ -80,7 +87,7 @@
                                                                                                    href="mailto:email@email.com">{{$team_member->email}} </a>
                                             </li>
                                             <li class="contacts"><i
-                                                    class="bi bi-telephone"></i> {{$team_member->phone_number}} </a>
+                                                    class="bi bi-telephone"></i> {{$team_member->phone_number}}
                                             </li>
                                         </ul><!--//social-list-->
                                     </div><!--//card-footer-->
@@ -98,35 +105,53 @@
             <div class="publications-section container overflow-hidden">
                 <div class="row gy-5">
                     @foreach($projects as $project)
-                        <div class="col-12">
-                            <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
-                                <div class="col-xs-12 col-md-6">
-                                    <div class="img-wrapper position-relative bsb-hover-push">
-                                        <a href="/projectDetails/{{$project->id}}">
-                                        <span
-                                            class="badge rounded-pill text-bg-warning position-absolute top-0 start-0 m-3">{{$project->title}}</span>
-                                            <img class="img-fluid rounded-5 w-100 h-100 object-fit-cover" loading="lazy"
-                                                 src="{{asset('storage/' . $project->image )}}">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-md-6">
-                                    <div>
-                                        @foreach ($project->authors as $author)
-                                            <a class="teamMemLink" href="/teamMember/{{$author->id}}">
-                                                <span>{{ $author->name }}</span>@if (!$loop->last),
+                        @if($project->show_homepage)
+                            <div class="col-12">
+                                <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="img-wrapper position-relative bsb-hover-push">
+                                            <a href="/projectDetails/{{$project->id}}">
+                                                <span
+                                                    class="badge rounded-pill text-bg-warning position-absolute top-0 start-0 m-3">
+                                                    {{$project->title}}
+                                                </span>
+                                                @if(empty($project->image))
+                                                    <div class="ratio ratio-16x9">
+                                                        <img src="https://placehold.co/1200x12000?text={{$project->title}}"
+                                                             class="img-fluid rounded-5 object-fit-cover"
+                                                             alt="{{ $project->title }}">
+                                                    </div>
+                                                @else
+                                                    <div class="ratio ratio-16x9">
+                                                        <img class="img-fluid rounded-5 object-fit-cover"
+                                                             loading="lazy"
+                                                             src="{{ asset('storage/' . $project->image) }}"
+                                                             alt="{{ $project->title }}">
+                                                    </div>
                                                 @endif
-                                                @endforeach
                                             </a>
-                                            <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
-                                                                   href="/projectDetails/{{$project->id}}">{{$project->title}}</a></h2>
-                                            <p class="mb-4 text-break">{{$project->abstract}}</p>
-                                            <a class="btn btn-primary projectButton" href="/projectDetails/{{$project->id}}"
-                                               target="_self">Read More</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <div>
+                                            @foreach ($project->authors as $author)
+                                                <a class="teamMemLink" href="/teamMember/{{$author->id}}">
+                                                    <span>{{ $author->name }}</span>@if (!$loop->last),
+                                                    @endif
+                                                    @endforeach
+                                                </a>
+                                                <h2 class="h1 mb-3"><a class="link-dark text-decoration-none"
+                                                                       href="/projectDetails/{{$project->id}}">{{$project->title}}</a>
+                                                </h2>
+                                                <p class="mb-4 text-break multiline-truncate">{{$project->abstract}}</p>
+                                                <a class="btn btn-primary projectButton"
+                                                   href="/projectDetails/{{$project->id}}"
+                                                   target="_self">Read More</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endif
                     @endforeach
 
 
@@ -135,28 +160,31 @@
                     <h1 class="home_welcome public">Publications</h1>
 
                     @foreach($publications as $publication)
-                        <div class="card  publCard">
-                            <div class="card-body">
-                                <h5 class="card-title"><h2>{{$publication->title}}</h2></h5>
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    @foreach ($publication->authors as $author)
-                                        <a class="teamMemLink" href="/teamMember/{{$author->id}}">
-                                            <span>{{ $author->name }}</span>@if (!$loop->last),
-                                            @endif
-                                            @endforeach
-                                        </a>
-                                </h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <small class="text-muted">{{$publication->publication_date}}</small>
+                        @if($publication->show_homepage)
+                            <div class="card publCard">
+                                <div class="card-body">
+                                    <h5 class="card-title"><h2>{{$publication->title}}</h2></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">
+                                        @foreach ($publication->authors as $author)
+                                            <a class="teamMemLink" href="/teamMember/{{$author->id}}">
+                                                <span>{{ $author->name }}</span>@if (!$loop->last),
+                                                @endif
+                                                @endforeach
+                                            </a>
+                                    </h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk of the card's content.</p>
+                                    <small class="text-muted">{{$publication->publication_date}}</small>
+                                </div>
                             </div>
-                        </div>
+                        @endif
                     @endforeach
 
 
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
 @endsection

@@ -9,6 +9,7 @@
 
     @vite([
         'resources/sass/app.scss',
+        'resources/sass/app.css',
         'resources/js/app.js',
         'resources/css/layout.css',
         'resources/css/home.css',
@@ -16,7 +17,7 @@
         'resources/css/teamMember.css',
         'resources/css/publications.css',])
     <style>
-        /* Ensure the body and html take full height */
+
         html, body {
             height: 100%;
             margin: 0;
@@ -24,12 +25,10 @@
             flex-direction: column;
         }
 
-        /* Main container to fill the space */
         body > div {
-            flex: 1; /* This makes the content container take up available space */
+            flex: 1;
         }
 
-        /* Footer styles */
         footer {
             background-color: #333;
             color: white;
@@ -75,7 +74,15 @@
                             </a>
                             <script>
                                 function scrollToEnd() {
-                                    window.scrollTo(0, document.body.scrollHeight);
+                                    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+
+                                    const footer = document.querySelector("footer");
+
+                                    footer.classList.add("flash-effect");
+
+                                    setTimeout(() => {
+                                        footer.classList.remove("flash-effect");
+                                    }, 1500); // Matches the animation duration
                                 }
                             </script>
                         </li>
@@ -88,7 +95,7 @@
 <div>
     @yield('content')
 </div>
-<footer class="footer-nav text-center text-lg-start text-white" style="padding: 0">
+<footer id="main-footer" class="footer-nav text-center text-lg-start text-white" style="padding: 0">
     <div class="container p-4 pb-0 ">
         <section class="">
             <div class="row">

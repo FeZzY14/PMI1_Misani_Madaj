@@ -29,7 +29,12 @@ class TeachingResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('body')
-                    ->required(),
+                    ->required()
+                    ->maxLength(500),
+                Forms\Components\Select::make('authors')
+                    ->multiple()
+                    ->relationship('authors', 'name')
+                    ->label('Team Member'),
                 FileUpload::make('image')
                     ->image()
                     ->directory('teachings')
@@ -48,6 +53,7 @@ class TeachingResource extends Resource
             ->reorderable('order')
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->icon('heroicon-o-presentation-chart-line')
                     ->label('Title')
                     ->searchable()
                     ->sortable(),

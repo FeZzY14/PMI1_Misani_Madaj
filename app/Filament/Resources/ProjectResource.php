@@ -37,6 +37,9 @@ class ProjectResource extends Resource
                     ->label('Authors'),
                 Forms\Components\DatePicker::make('project_date')
                     ->required(),
+                Forms\Components\Checkbox::make('show_homepage')
+                    ->label('Will be Shown on Homepage')
+                    ->default(false),
                 FileUpload::make('image')
                     ->image()
                     ->directory('projects')
@@ -46,18 +49,18 @@ class ProjectResource extends Resource
                     ->imagePreviewHeight('250')
                     ->openable()
                     ->getUploadedFileNameForStorageUsing(fn($file) => $file->store('projects', 'public')),
-                Forms\Components\Checkbox::make('show_homepage')
-                    ->label('Will be Shown on Homepage')
-                    ->default(false),
+
             ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
+            ->query(Project::orderBy('order', 'asc'))
+            ->reorderable('order')
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->icon('heroicon-o-book-open')
+                    ->icon('heroicon-o-beaker')
                     ->label('Title')
                     ->searchable()
                     ->sortable(),
